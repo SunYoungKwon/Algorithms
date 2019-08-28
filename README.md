@@ -14,5 +14,6 @@
   + n-Queens
 
 
-## 알고리즘 사이트
+## 알고리즘 문제 풀이
+ 알고리즘 문제 사이트
   + [Programmers](https://programmers.co.kr/)
