@@ -9,15 +9,11 @@ class Solution {
         for(int n = 0; n < commands.length; n++) {
             i = commands[n][0];
             j = commands[n][1];
-            int[] temp = new int[j - i + 1];     // i~j로 자른 배열 생성
+            int[] temp = Arrays.copyOfRange(array, i - 1, j);     // array의 i번째부터 j번째까지 복사
             
-            for(int k = 0; k < temp.length; k++) {
-                temp[k] = array[i - 1 + k];      // array의 i~j부분 복사
-            }
+            Arrays.sort(temp);      // 정렬
             
-            Arrays.sort(temp);    // 정렬
-            
-            answer[n] = temp[commands[n][2] - 1];   // k번째 수
+            answer[n] = temp[commands[n][2] - 1];   // k번째 수 저장
         }
         
         return answer;
