@@ -15,7 +15,7 @@ public class test {
 	}
 	
 	public static void main(String[] args) {
-		int input[];
+		int[] input;
 		int noInput;
 		
 		Scanner sc = new Scanner(System.in);
@@ -27,7 +27,7 @@ public class test {
 		for (int i = 0; i < noInput; i++)
 			input[i] = sc.nextInt();
 		
-		System.out.print("The way to sort(1-Exchange, 2-Merge1, 3-Merge2, 4-Quick): ");
+		System.out.print("The way to sort(1-Exchange, 2-Merge1, 3-Merge2, 4-Quick, 5-Selection): ");
 		int way = sc.nextInt();
 		
 		sc.close();
@@ -53,6 +53,13 @@ public class test {
 				QuickSort test4 = new QuickSort(input);
 				test4.quicksort();
 				break;
+			case 5:
+				SelectionSort test5 = new SelectionSort();
+				test5.selectionSort(input);
+				break;
+			default:
+				System.out.println("Invalid number!");
+				
 		}
 		
 		System.out.println("[ After ]------------------------");
